@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        *::selection {
+            background-color: red;
+        }
+
+        body {
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            width: 900px;
+            height: 500px;
+            display: flex;
+            margin: auto;
+            gap: 10px;
+            background-color: white;
+            box-shadow: 1px 4px 15px rgb(0, 0, 0), 2px 6px 15px black;
+        }
+
+        .col-50 {
+            flex: 1 50%;
+        }
+
+        .purple {
+            flex: 1 100%;
+            /* background-color: #af79e8; */
+            background-color: #e8c476;
+            ;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 8px;
+            /* border-bottom: 1px solid black; */
+            overflow: hidden;
+            /* padding: 0 12px; */
+            box-shadow: 3px 0px 4px black;
+        }
+
+        .black {
+            background-color: white;
+            /* border: 1px solid red; */
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .product-top {
+            width: 100%;
+            padding: 4px 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .icon-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon-container a {
+            /* text-decoration: none; */
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        .icon-container a i {
+            font-size: 22px;
+        }
+
+        .img {
+            /* border: 2px solid red; */
+            width: 360px;
+            height: 350px;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dots i {
+            font-size: 30px;
+            color: white;
+        }
+
+        .price-section {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            padding: 14px 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cardlogo-container {
+            margin-top: 10px;
+            display: flex;
+            gap: 20px;
+            /* box-shadow: 1px 2px 2px black; */
+
+        }
+
+        .cardlogo-container img {
+            width: 50px;
+            height: 40px;
+            box-shadow: 1px 1px 3px black;
+        }
+
+        .row {
+            margin-top: 20px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .row .form-control {
+            width: 100%;
+            align-self: flex-start;
+        }
+
+        .form-control {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+
+        .second-row {
+            margin-top: 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .col-65 {
+            flex: 1 65%;
+        }
+
+        input {
+            padding: 16px 10px;
+            border-radius: 20px;
+            font-size: 1rem;
+            border: 1px solid black;
+            text-transform: uppercase;
+
+        }
+
+        .paybtn {
+            margin-top: 20px;
+        }
+
+        .paybtn button {
+            border-style: none;
+            background-color: rgb(14, 137, 43);
+            width: 100%;
+            padding: 10px;
+            font-size: 25px;
+            margin-top: 20;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-50 purple">
+            <div class="product-top">
+                <div class="icon-container">
+                    <a href=""> <i class="fa-solid fa-arrow-left"></i></a>
+                    <a href=""> <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="product-info">
+                    <p>boAt Rockerz 551</p>
+                    <h3>100 HRS Playback</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img src="./img/headphone.png" alt="">
+            </div>
+            <div class="dots">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="price-section">
+                <h3>TOTAL</h3>
+                <div class="mrp">
+                    <h3>₹4,999</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-50 black">
+            <h2>Payment Information</h2>
+            <div class="cardlogo-container">
+                <img src="./img/visa-removebg-preview.png" alt="">
+                <img src="./img/master_card-removebg-preview.png" alt="">
+                <img src="./img/paypal-removebg-preview.png" alt="">
+                <img src="./img/american_express-removebg-preview.png" alt="">
+            </div>
+            <form action="jay.php" id="form1">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-control">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" name="card-number" id="card-number" pattern=""
+                                placeholder="xxxxxxxxxxxxxx" size="">
+                        </div>
+                        <div class="form-control">
+                            <label for="card-holder">Card Number</label>
+                            <input type="text" name="card-holder" id="card-holder" placeholder="Your Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="second-row">
+                    <div class="form-control col-65">
+                        <label for="expiry">Expiration Date</label>
+                        <input type="tel" name="expiry" id="expiry" placeholder="MM/YY" pattern="[1-9]{2}/[1-9]{2}"
+                            required>
+                    </div>
+                    <div class="form-control col-35">
+                        <label for="cvv">Security Code</label>
+                        <input type="tel" name="cvv" id="cvv" placeholder="CVV" pattern="[0-9]{3}" required>
+                    </div>
+                </div>
+            </form>
+            <div class="paybtn">
+                <button type="submit" form="form1">Pay Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
